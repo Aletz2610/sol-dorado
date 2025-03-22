@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operación Sol Dorado</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding-top: 50px;
+        }
+        h1 {
+            color: #f39c12;
+        }
+        .message {
+            font-size: 24px;
+            margin: 20px;
+            color: #333;
+        }
+        .message span {
+            display: inline-block;
+            opacity: 0;
+            animation: reveal 3s forwards;
+        }
+        @keyframes reveal {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .complete {
+            margin-top: 40px;
+            font-size: 30px;
+            color: #27ae60;
+        }
+        .flower {
+            font-size: 50px;
+            animation: flower 1s infinite;
+        }
+        @keyframes flower {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Iniciando protocolo secreto: *Operación Sol Dorado*... 🌻</h1>
+    <div class="message"><span>Procesando datos de amor...</span></div>
+    <div class="message"><span>Verificando destinatario...</span></div>
+    <div class="message"><span>Cargando sorpresa especial...</span></div>
+    <div class="message complete">
+        <span>🎉 *Misión cumplida.* Entrega las flores ahora.</span>
+    </div>
+    <div class="flower">🌻</div>
+
+    <script>
+        setTimeout(function() {
+            document.querySelectorAll('.message span').forEach((span, i) => {
+                setTimeout(() => {
+                    span.style.opacity = 1;
+                }, i * 1500); // Retraso entre mensajes
+            });
+        }, 500);
+    </script>
+</body>
+</html>
